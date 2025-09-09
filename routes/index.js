@@ -45,7 +45,7 @@ router.post("/new", (req, res) => {
 // Individual message route
 router.get("/message/:id", (req, res) => {
   const messageId = parseInt(req.params.id);
-  const message = messages(messageId);
+  const message = messages[messageId];
 
   if (message) {
     res.render("message", {
