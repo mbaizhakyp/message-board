@@ -98,5 +98,16 @@
         </div>
       </form>
     </div>
+    <script>
+      document.querySelector("form").addEventListener("submit", function (e) {
+        const user = document.getElementById("messageUser").value.trim();
+        const text = document.getElementById("messageText").value.trim();
+
+        if (!user || !text) {
+          e.preventDefault();
+          alert("Please fill in all fields");
+        }
+      });
+    </script>
   </body>
 </html>
